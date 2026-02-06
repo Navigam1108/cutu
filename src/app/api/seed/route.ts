@@ -14,7 +14,7 @@ export async function GET() {
     const daysData = [
         {
             dayId: 1,
-            unlockDate: new Date('2026-02-07T00:00:00'),
+            unlockDate: new Date('2026-02-07T00:00:00+05:30'),
             passcode: 'pns',
             hint: 'c se cutu, c se cr (3 letters)',
             imageUrl: '/images/day1-placeholder.png',
@@ -24,7 +24,7 @@ export async function GET() {
         },
         {
             dayId: 2,
-            unlockDate: new Date('2026-02-08T00:00:00'),
+            unlockDate: new Date('2026-02-08T00:00:00+05:30'),
             passcode: 'pink',
             hint: 'the color of ur dress when i first saw u as my gf',
             imageUrl: '/images/day2-placeholder.png',
@@ -34,7 +34,7 @@ export async function GET() {
         },
         {
             dayId: 3,
-            unlockDate: new Date('2026-02-09T00:00:00'),
+            unlockDate: new Date('2026-02-09T00:00:00+05:30'),
             passcode: 'amul',
             hint: 'where i called u for night walks',
             imageUrl: '/images/day3-placeholder.png',
@@ -44,7 +44,7 @@ export async function GET() {
         },
         {
             dayId: 4,
-            unlockDate: new Date('2026-02-10T00:00:00'),
+            unlockDate: new Date('2026-02-10T00:00:00+05:30'),
             passcode: 'pasta',
             hint: 'ur favorite cheat meal',
             imageUrl: '/images/day4-placeholder.png',
@@ -54,7 +54,7 @@ export async function GET() {
         },
         {
             dayId: 5,
-            unlockDate: new Date('2026-02-11T00:00:00'),
+            unlockDate: new Date('2026-02-11T00:00:00+05:30'),
             passcode: 'bk',
             hint: 'our first real date cafe (2lettters)',
             imageUrl: '/images/day5-placeholder.png',
@@ -64,7 +64,7 @@ export async function GET() {
         },
         {
             dayId: 6,
-            unlockDate: new Date('2026-02-12T00:00:00'),
+            unlockDate: new Date('2026-02-12T00:00:00+05:30'),
             passcode: 'cutepoint',
             hint: 'our first hug was at this point',
             imageUrl: '/images/day6-placeholder.png',
@@ -74,7 +74,7 @@ export async function GET() {
         },
         {
             dayId: 7,
-            unlockDate: new Date('2026-02-13T00:00:00'),
+            unlockDate: new Date('2026-02-13T00:00:00+05:30'),
             passcode: '2states',
             hint: 'our first kiss (2)',
             imageUrl: '/images/day7-placeholder.png',
