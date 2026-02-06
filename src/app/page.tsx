@@ -151,7 +151,7 @@ export default function Home() {
         </div>
       </div>
 
-      {process.env.NEXT_PUBLIC_DEBUG_DATE === 'true' && (
+      {process.env.NEXT_PUBLIC_DEBUG_DATE === '2026-02-14' && (
         <footer className="mt-16 text-center text-stone-400 pb-8">
           <p className="font-serif italic mb-4">Made with all my love ❤️</p>
           <button
