@@ -10,7 +10,11 @@ export function getCurrentDate() {
     if (process.env.NEXT_PUBLIC_DEBUG_DATE) {
         return new Date(process.env.NEXT_PUBLIC_DEBUG_DATE);
     }
-    return new Date();
+
+    // Get current time in IST (Indian Standard Time)
+    const now = new Date();
+    const istString = now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" });
+    return new Date(istString);
 }
 
 /**
@@ -20,11 +24,14 @@ export function getCurrentDate() {
  */
 export function getDayIdFromDate(): number {
     const now = getCurrentDate();
-    const start = new Date(process.env.NEXT_PUBLIC_START_DATE || '2026-02-07');
+    const startStr = process.env.NEXT_PUBLIC_START_DATE || '2026-02-07';
 
-    // Reset times for date comparison
+    // Parse manually to ensure consistent local time construction
+    const [sYear, sMonth, sDay] = startStr.split('-').map(Number);
+    const startDate = new Date(sYear, sMonth - 1, sDay);
+
+    // Reset times for date comparison (using components from the IST-shifted 'now')
     const nowDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    const startDate = new Date(start.getFullYear(), start.getMonth(), start.getDate());
 
     const diffTime = nowDate.getTime() - startDate.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
